@@ -5,6 +5,7 @@ import "p2p.proto";
 import "rpc.proto";
 
 option java_multiple_files = true;
+option java_package = "org.example.grpc";
 
 message KaspadMessage {
   oneof payload {
