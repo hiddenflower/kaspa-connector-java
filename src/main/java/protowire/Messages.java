@@ -297,8 +297,9 @@ public final class Messages {
       "MessageStream\022\030.protowire.KaspadMessage\032" +
       "\030.protowire.KaspadMessage\"\000(\0010\0012P\n\003RPC\022I" +
       "\n\rMessageStream\022\030.protowire.KaspadMessag" +
-      "e\032\030.protowire.KaspadMessage\"\000(\0010\001B\r\n\tpro" +
-      "towireP\001b\006proto3"
+      "e\032\030.protowire.KaspadMessage\"\000(\0010\001B(\n$git" +
+      "hub.com/kaspanet/kaspad/protowireP\001b\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

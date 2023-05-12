@@ -35,7 +35,7 @@ public class ClientP2P {
     private static final Logger log = LogManager.getLogger(ClientP2P.class);
 
     public static void main(String[] args) throws InterruptedException {
-        log.info("numbers Client is starting...");
+        log.info("Client is starting...");
 
         var managedChannel = Grpc.newChannelBuilder(
                 ApplicationProperties.getServerHost() +":" + ApplicationProperties.getServerPort(),
@@ -49,7 +49,7 @@ public class ClientP2P {
         StreamObserver<KaspadMessage> kaspadMessageStreamObserver = asyncClient.messageStream(new ClientP2PStreamObserver<KaspadMessage>(latch));
         latch.await();
 
-        log.info("numbers Client is shutting down...");
+        log.info("Client is shutting down...");
         managedChannel.shutdown();
     }
 

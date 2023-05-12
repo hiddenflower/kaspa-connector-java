@@ -448,8 +448,8 @@ public final class P2P {
       "\023ghostdagDataIndices\030\003 \003(\004\"z\n\022TrustedDat" +
       "aMessage\022(\n\tdaaWindow\030\001 \003(\0132\025.protowire." +
       "DaaBlockV4\022:\n\014ghostdagData\030\002 \003(\0132$.proto" +
-      "wire.BlockGhostdagDataHashPairB\r\n\tprotow" +
-      "ireP\001b\006proto3"
+      "wire.BlockGhostdagDataHashPairB(\n$github" +
+      ".com/kaspanet/kaspad/protowireP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

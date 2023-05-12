@@ -818,8 +818,8 @@ public final class Rpc {
       "or\"\035\n\033GetCoinSupplyRequestMessage\"o\n\034Get" +
       "CoinSupplyResponseMessage\022\020\n\010maxSompi\030\001 " +
       "\001(\004\022\030\n\020circulatingSompi\030\002 \001(\004\022#\n\005error\030\350" +
-      "\007 \001(\0132\023.protowire.RPCErrorB\r\n\tprotowireP" +
-      "\001b\006proto3"
+      "\007 \001(\0132\023.protowire.RPCErrorB(\n$github.com" +
+      "/kaspanet/kaspad/protowireP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
