@@ -5,25 +5,26 @@ import io.grpc.stub.StreamObserver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class ClientP2PStreamObserver<T> implements StreamObserver<T> {
+public class ClientP2PStreamObserver<KaspadMessage> implements StreamObserver<KaspadMessage> {
     private static final Logger log = LogManager.getLogger(ClientP2PStreamObserver.class);
+    private final CountDownLatch latch;
 
-    public ClientP2PStreamObserver() {
-
+    public ClientP2PStreamObserver(CountDownLatch latch) {
+        this.latch = latch;
     }
 
     @Override
-    public void onNext(T response) {
-        log.info("new value:{}", response);
+    public void onNext(KaspadMessage kaspadMessage) {
+        log.info(kaspadMessage.toString());
     }
 
     @Override
-    public void onError(Throwable e) {
-        log.error("got error", e);
+    public void onError(Throwable throwable) {
+        log.info(throwable.toString());
     }
 
     @Override
     public void onCompleted() {
-        log.info("request completed");
+        log.info("Completed");
     }
 }
