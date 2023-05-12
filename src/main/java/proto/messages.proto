@@ -1,11 +1,11 @@
 syntax = "proto3";
-package proto;
+package protowire;
 
-import "proto/p2p.proto";
-import "proto/rpc.proto";
+import "p2p.proto";
+import "rpc.proto";
 
-// option java_multiple_files = true;
-// option java_package = "org.example.grpc";
+option java_multiple_files = true;
+option java_package = "protowire";
 
 message KaspadMessage {
   oneof payload {

@@ -8,10 +8,10 @@
 // **IMPORTANT:** This API is a work in progress and is subject to break between versions.
 //
 syntax = "proto3";
-package proto;
+package protowire;
 
 option java_multiple_files = true;
-option java_package = "org.example.grpc";
+option java_package = "protowire";
 
 // RPCError represents a generic non-internal error.
 //
