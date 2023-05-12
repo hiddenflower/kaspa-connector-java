@@ -1,4 +1,4 @@
-package proto_java;
+package proto_java.service;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
