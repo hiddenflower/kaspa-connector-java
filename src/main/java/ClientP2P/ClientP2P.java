@@ -2,6 +2,7 @@ package ClientP2P;
 
 import ApplicationProperties.ApplicationProperties;
 import io.grpc.stub.StreamObserver;
+import protowire.GetBlockCountRequestMessage;
 import protowire.KaspadMessage;
 import io.grpc.Grpc;
 import io.grpc.InsecureChannelCredentials;
@@ -9,6 +10,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import protowire.P2PGrpc;
 import protowire.P2PGrpc.P2PStub;
+import protowire.PingMessage;
 
 import java.util.concurrent.CountDownLatch;
 
@@ -47,6 +49,7 @@ public class ClientP2P {
 
         var latch = new CountDownLatch(1);
         StreamObserver<KaspadMessage> kaspadMessageStreamObserver = asyncClient.messageStream(new ClientP2PStreamObserver<KaspadMessage>(latch));
+
         latch.await();
 
         log.info("Client is shutting down...");
@@ -54,7 +57,8 @@ public class ClientP2P {
     }
 
     private static KaspadMessage kaspadMessageRequest() {
-        return KaspadMessage.newBuilder()
+        GetBlockCountRequestMessage getBlockCountRequestMessage = GetBlockCountRequestMessage.newBuilder().build();
+        return KaspadMessage.newBuilder().setGetBlockCountRequest(getBlockCountRequestMessage)
                 .build();
     }
 }
